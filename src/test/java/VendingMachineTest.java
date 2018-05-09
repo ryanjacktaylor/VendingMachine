@@ -43,4 +43,18 @@ public class VendingMachineTest {
         assertEquals("$0.40",vm.getDisplay());
 
     }
+
+    @Test
+    public void whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit(){
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Insert penny and check the user credit
+        vm.insertCoin(19.05f , 2.5f);
+        assertEquals(INSERT_COIN_TEXT,vm.getDisplay());
+
+        //Insert Chuck E Cheese Token and check the user credit
+        vm.insertCoin(25f , 5f); //http://www.hrafnstead.org/tokens/cec/CEC.html
+        assertEquals(INSERT_COIN_TEXT,vm.getDisplay());
+    }
 }
