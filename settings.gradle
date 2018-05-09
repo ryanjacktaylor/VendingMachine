@@ -1,0 +1,5 @@
+rootProject.name = 'VendingMachine'
+include 'vending_machine'
+rootProject.name = 'VendingMachine'
+include 'yar'
+
