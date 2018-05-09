@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 public class VendingMachine {
 
     //Display Constants
@@ -37,7 +39,8 @@ public class VendingMachine {
 
                 //If there is a value, display it.  If it's 0, show INSERT COIN
                 if (sUserCreditInCents > 0) {
-                    mDisplay = "$" + String.valueOf(sUserCreditInCents / 100) + "." + String.valueOf(sUserCreditInCents % 100);
+                    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+                    mDisplay = formatter.format((float)sUserCreditInCents/100f);
                 } else {
                     mDisplay = INSERT_COIN_TEXT;
                 }

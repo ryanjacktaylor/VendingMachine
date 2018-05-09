@@ -1,11 +1,14 @@
 import org.junit.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class VendingMachineTest {
 
     //Display Constants
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
+    private static final String THANK_YOU_TEXT = "THANK YOU";
 
     //Coin Diameter/Weight constants
     private static final float QUARTER_DIA_MM = 24.26f;
@@ -92,5 +95,30 @@ public class VendingMachineTest {
         ProductRequestResponse candyResponse = vm.requestProduct(CANDY_PRODUCT_NAME);
         assertEquals(candyResponse.getProductName(), CANDY_PRODUCT_NAME);
         assertEquals(candyResponse.isProductDispensed(), true);
+    }
+
+    @Test
+    public void whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Add Money and select Cola
+        for (int i = 0; i<4; i++) {
+            vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        }
+        ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+
+        //Immediately check the display
+        assertEquals(THANK_YOU_TEXT, vm.getDisplay());
+
+        //Check the display again after 6 seconds
+        try {
+            TimeUnit.SECONDS.sleep(6);
+        } catch(InterruptedException ex) {
+            //Fail if there's an exception
+            assertEquals(true, false);
+        }
+        assertEquals(INSERT_COIN_TEXT, vm.getDisplay());
     }
 }
