@@ -15,6 +15,11 @@ public class VendingMachineTest {
     private static final float NICKEL_DIA_MM = 21.21f;
     private static final float NICKEL_WEIGHT_G = 5f;
 
+    //Product Constants
+    private static final String COLA_PRODUCT_NAME = "cola";
+    private static final String CHIPS_PRODUCT_NAME = "chips";
+    private static final String CANDY_PRODUCT_NAME = "candy";
+
     @Test
     public void whenThereIsNoMoneyInTheVendingMachineTheDisplaySaysINSERTCOIN(){
 
