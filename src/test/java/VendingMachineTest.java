@@ -57,4 +57,35 @@ public class VendingMachineTest {
         vm.insertCoin(25f , 5f); //http://www.hrafnstead.org/tokens/cec/CEC.html
         assertEquals(INSERT_COIN_TEXT,vm.getDisplay());
     }
+
+    @Test
+    public void whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Add Money and select Cola
+        for (int i = 0; i<4; i++) {
+            vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        }
+        ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+        assertEquals(colaResponse.getProductName(), COLA_PRODUCT_NAME);
+        assertEquals(colaResponse.isProductDispensed(), true);
+
+        //Add Money and select Chips
+        for (int i = 0; i<2; i++) {
+            vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        }
+        ProductRequestResponse chipsResponse = vm.requestProduct(CHIPS_PRODUCT_NAME);
+        assertEquals(chipsResponse.getProductName(), CHIPS_PRODUCT_NAME);
+        assertEquals(chipsResponse.isProductDispensed(), true);
+
+        //Add Money and select Candy
+        vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        vm.insertCoin(DIME_DIA_MM, DIME_WEIGHT_G);
+        vm.insertCoin(NICKEL_DIA_MM, NICKEL_WEIGHT_G);
+        ProductRequestResponse candyResponse = vm.requestProduct(CANDY_PRODUCT_NAME);
+        assertEquals(candyResponse.getProductName(), CANDY_PRODUCT_NAME);
+        assertEquals(candyResponse.isProductDispensed(), true);
+    }
 }
