@@ -1,9 +1,12 @@
 import java.text.NumberFormat;
+import java.util.concurrent.TimeUnit;
 
 public class VendingMachine {
 
     //Display Constants
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
+    private static final String THANK_YOU_TEXT = "THANK YOU";
+    private static final int DISPLAY_DELAY_SECONDS = 5;
 
     //Product Constants
     private static final String COLA_PRODUCT_NAME = "cola";
@@ -70,6 +73,22 @@ public class VendingMachine {
                     //There's enough money.  Dispense product.
                     response.setProductName(product.getName());
                     response.setProductDispensed(true);
+
+                    //Set the display to THANK YOU
+                    mDisplay = THANK_YOU_TEXT;
+
+                    //Kick off a thread to change the display to INSERT COIN after a short delay
+
+                    new Thread(new Runnable() {
+                        public void run() {
+                            try {
+                                TimeUnit.SECONDS.sleep(5);
+                            } catch(InterruptedException ex) {
+                                //Doesn't really matter.  We'll set back to default either way
+                            }
+                            mDisplay = INSERT_COIN_TEXT;
+                        }
+                    }).start();
 
                 }
 
