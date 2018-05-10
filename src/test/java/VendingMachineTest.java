@@ -9,6 +9,7 @@ public class VendingMachineTest {
     //Display Constants
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
     private static final String THANK_YOU_TEXT = "THANK YOU";
+    private static final String PRICE_TEXT = "PRICE";
 
     //Coin Diameter/Weight constants
     private static final float QUARTER_DIA_MM = 24.26f;
@@ -120,5 +121,28 @@ public class VendingMachineTest {
             assertEquals(true, false);
         }
         assertEquals(INSERT_COIN_TEXT, vm.getDisplay());
+    }
+
+    @Test
+    public void whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Add Money and select Cola
+        vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+
+        //Immediately check the display
+        assertEquals(PRICE_TEXT, vm.getDisplay());
+
+        //Check the display again after 6 seconds
+        try {
+            TimeUnit.SECONDS.sleep(6);
+        } catch(InterruptedException ex) {
+            //Fail if there's an exception
+            assertEquals(true, false);
+        }
+        assertEquals("$0.25", vm.getDisplay());
     }
 }

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+            <state relative-caret-position="750">
+              <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="82" column="43" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+            <state relative-caret-position="563">
+              <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1027#1028#0" expanded="true" />
@@ -524,8 +523,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/CoinAcceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProductRequestResponse.java" />
-        <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
       </list>
     </option>
   </component>
@@ -617,7 +616,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -655,13 +654,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.whenThereIsNoMoneyInTheVendingMachineTheDisplaySaysINSERTCOIN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="whenThereIsNoMoneyInTheVendingMachineTheDisplaySaysINSERTCOIN" />
+      <option name="METHOD_NAME" value="whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -745,19 +744,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VendingMachineTest.whenThereIsNoMoneyInTheVendingMachineTheDisplaySaysINSERTCOIN" />
       <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
       <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
+      <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
         <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
         <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
         <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" />
         <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
-        <item itemvalue="JUnit.VendingMachineTest.whenThereIsNoMoneyInTheVendingMachineTheDisplaySaysINSERTCOIN" />
       </list>
     </recent_temporary>
   </component>
@@ -771,7 +770,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525907198997</updated>
-      <workItem from="1525907202861" duration="4370000" />
+      <workItem from="1525907202861" duration="4684000" />
     </task>
     <servers />
   </component>
@@ -808,7 +807,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4370000" />
+    <option name="totallyTimeSpent" value="4684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
@@ -892,26 +891,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="82" column="43" lean-forward="true" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+        <state relative-caret-position="563">
+          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1027#1028#0" expanded="true" />
             <element signature="e#1058#1059#0" expanded="true" />
             <element signature="e#1117#1118#0" expanded="true" />
             <element signature="e#1177#1178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
