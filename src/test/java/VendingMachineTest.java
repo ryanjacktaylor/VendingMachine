@@ -91,6 +91,7 @@ public class VendingMachineTest {
 
         //Add Money and select Candy
         vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
         vm.insertCoin(DIME_DIA_MM, DIME_WEIGHT_G);
         vm.insertCoin(NICKEL_DIA_MM, NICKEL_WEIGHT_G);
         ProductRequestResponse candyResponse = vm.requestProduct(CANDY_PRODUCT_NAME);

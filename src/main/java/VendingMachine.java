@@ -6,6 +6,7 @@ public class VendingMachine {
     //Display Constants
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
     private static final String THANK_YOU_TEXT = "THANK YOU";
+    private static final String PRICE_TEXT = "PRICE";
     private static final int DISPLAY_DELAY_SECONDS = 5;
 
     //Product Constants
@@ -33,6 +34,9 @@ public class VendingMachine {
         //Initialize Display
         mDisplay = INSERT_COIN_TEXT;
 
+        //Init user credit
+        sUserCreditInCents = 0;
+
         //Create the coin acceptor
         mCoinAcceptor = new CoinAcceptor();
         mCoinAcceptor.setOnCoinReceivedListener(new CoinAcceptor.OnCoinReceivedListener() {
@@ -41,12 +45,7 @@ public class VendingMachine {
                 sUserCreditInCents+=coinValue;
 
                 //If there is a value, display it.  If it's 0, show INSERT COIN
-                if (sUserCreditInCents > 0) {
-                    NumberFormat formatter = NumberFormat.getCurrencyInstance();
-                    mDisplay = formatter.format((float)sUserCreditInCents/100f);
-                } else {
-                    mDisplay = INSERT_COIN_TEXT;
-                }
+                resetDisplay();
             }
         });
     }
@@ -74,26 +73,54 @@ public class VendingMachine {
                     response.setProductName(product.getName());
                     response.setProductDispensed(true);
 
+                    //Set the user credit to 0
+                    sUserCreditInCents = 0;
+
                     //Set the display to THANK YOU
                     mDisplay = THANK_YOU_TEXT;
 
                     //Kick off a thread to change the display to INSERT COIN after a short delay
+                    resetDisplayAfterDelay(DISPLAY_DELAY_SECONDS);
 
-                    new Thread(new Runnable() {
-                        public void run() {
-                            try {
-                                TimeUnit.SECONDS.sleep(5);
-                            } catch(InterruptedException ex) {
-                                //Doesn't really matter.  We'll set back to default either way
-                            }
-                            mDisplay = INSERT_COIN_TEXT;
-                        }
-                    }).start();
+                } else {
 
+                    //Set the display to THANK YOU
+                    mDisplay = PRICE_TEXT;
+
+                    //Kick off a thread to change the display to INSERT COIN after a short delay
+                    resetDisplayAfterDelay(DISPLAY_DELAY_SECONDS);
                 }
 
             }
         }
         return response;
+    }
+
+    private void resetDisplayAfterDelay(int timeDelay){
+
+        if (timeDelay>0) {
+
+            new Thread(() -> {
+
+                //Delay
+                try {
+                    TimeUnit.SECONDS.sleep(timeDelay);
+                } catch (InterruptedException ex) {
+                    //Doesn't really matter.  We'll set back to default either way
+                }
+
+                //Reset the display
+               resetDisplay();
+            }).start();
+        }
+    }
+
+    private void resetDisplay(){
+        if (sUserCreditInCents > 0) {
+            NumberFormat formatter = NumberFormat.getCurrencyInstance();
+            mDisplay = formatter.format((float) sUserCreditInCents / 100f);
+        } else {
+            mDisplay = INSERT_COIN_TEXT;
+        }
     }
 }

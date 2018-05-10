@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -29,8 +32,8 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+            <state relative-caret-position="527">
+              <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,8 +44,8 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            <state relative-caret-position="667">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1027#1028#0" expanded="true" />
@@ -584,6 +587,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="VendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VendingMachine" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -616,9 +626,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds">
+  <component name="RunManager" selected="JUnit.VendingMachineTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="VendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
@@ -688,23 +715,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -744,19 +754,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
-      <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
+      <item itemvalue="JUnit.VendingMachineTest" />
+      <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
-        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
+        <item itemvalue="JUnit.VendingMachineTest" />
         <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
-        <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit" />
         <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
+        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
+        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
       </list>
     </recent_temporary>
   </component>
@@ -770,44 +780,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525907198997</updated>
-      <workItem from="1525907202861" duration="4684000" />
+      <workItem from="1525907202861" duration="5993000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 44m 55s.xml">
+    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 09m 27s.xml">
       <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 49m 36s.xml">
+    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 10m 09s.xml">
       <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 49m 56s.xml">
+    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 14m 22s.xml">
       <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 50m 29s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit - 2018.05.09 at 20h 14m 28s.xml">
+      <configuration name="VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 51m 16s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit - 2018.05.09 at 20h 18m 02s.xml">
+      <configuration name="VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 52m 08s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest - 2018.05.09 at 20h 18m 29s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 52m 36s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit - 2018.05.09 at 20h 19m 30s.xml">
+      <configuration name="VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 53m 02s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct - 2018.05.09 at 20h 19m 35s.xml">
+      <configuration name="VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 53m 25s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct - 2018.05.09 at 20h 20m 08s.xml">
+      <configuration name="VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 19h 53m 40s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct - 2018.05.09 at 20h 21m 23s.xml">
+      <configuration name="VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4684000" />
+    <option name="totallyTimeSpent" value="5993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
@@ -822,7 +832,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972136" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -835,7 +845,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3993808" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -853,7 +863,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -891,10 +909,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/junit/framework/TestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+          <folding>
+            <element signature="e#7914#7915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        <state relative-caret-position="667">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1027#1028#0" expanded="true" />
@@ -907,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="143" column="38" lean-forward="true" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+        <state relative-caret-position="527">
+          <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
