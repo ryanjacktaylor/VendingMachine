@@ -10,6 +10,7 @@ public class VendingMachineTest {
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
     private static final String THANK_YOU_TEXT = "THANK YOU";
     private static final String PRICE_TEXT = "PRICE";
+    private static final String SOLD_OUT_TEXT = "SOLD OUT";
 
     //Coin Diameter/Weight constants
     private static final float QUARTER_DIA_MM = 24.26f;
@@ -193,5 +194,48 @@ public class VendingMachineTest {
         //Check the display says INSERT COIN
         assertEquals(INSERT_COIN_TEXT, vm.getDisplay());
 
+    }
+
+    @Test
+    public void whenProductInventoryIsZeroDisplaySoldOut(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Add Money and select Cola
+        for (int i = 0; i<4; i++) {
+            vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        }
+        ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+
+        //Verify SOLD OUT is displayed for 5 seconds
+        assertEquals(SOLD_OUT_TEXT, vm.getDisplay());
+        try {
+            TimeUnit.SECONDS.sleep(6);
+        } catch(InterruptedException ex) {
+            //Fail if there's an exception
+            assertEquals(true, false);
+        }
+        assertEquals("$1.00", vm.getDisplay());
+
+        //Add a cola to the machine
+        vm.addProductInventory(COLA_PRODUCT_NAME, 1);
+
+        //Select a product and verify it was dispensed
+        colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+        assertEquals(true, colaResponse.isProductDispensed());
+
+        //Select cola again (there should be no inventory)
+        colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+
+        //Verify SOLD OUT is displayed for 5 seconds, followed by INSERT_COIN
+        assertEquals(SOLD_OUT_TEXT, vm.getDisplay());
+        try {
+            TimeUnit.SECONDS.sleep(6);
+        } catch(InterruptedException ex) {
+            //Fail if there's an exception
+            assertEquals(true, false);
+        }
+        assertEquals(INSERT_COIN_TEXT, vm.getDisplay());
     }
 }
