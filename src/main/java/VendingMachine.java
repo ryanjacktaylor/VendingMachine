@@ -99,6 +99,21 @@ public class VendingMachine {
         return response;
     }
 
+    public Change selectCoinReturn(){
+
+        //Calculate change
+        Change change =  mCoinAcceptor.calculateChange(sUserCreditInCents);
+
+        //Reset user credit
+        sUserCreditInCents = 0;
+
+        //Reset the display
+        resetDisplay();
+
+        return change;
+
+    }
+
     private void resetDisplayAfterDelay(int timeDelay){
 
         if (timeDelay>0) {
