@@ -146,4 +146,28 @@ public class VendingMachineTest {
         }
         assertEquals("$0.25", vm.getDisplay());
     }
+
+    @Test
+    public void whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //Add $1.40.  This will require the machine to dispense one of each coin
+        for (int i = 0; i<5; i++) {
+            vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
+        }
+        vm.insertCoin(DIME_DIA_MM, DIME_WEIGHT_G);
+        vm.insertCoin(NICKEL_DIA_MM, NICKEL_WEIGHT_G);
+        ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
+
+        //Check that the product was dispensed
+        assertEquals(true, colaResponse.isProductDispensed());
+
+        //Check the change dispensed.  Should be one of each coin
+        Change change = colaResponse.getChange();
+        assertEquals(1, change.getQuarters());
+        assertEquals(1, change.getDimes());
+        assertEquals(1, change.getNickels());
+    }
 }

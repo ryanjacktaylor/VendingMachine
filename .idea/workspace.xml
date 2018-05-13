@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/VendingMachineTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +27,8 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+            <state relative-caret-position="784">
+              <caret line="171" column="5" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -603,6 +598,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/VendingMachine-master-20180513T201853Z-001/VendingMachine-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -780,17 +776,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525907198997</updated>
-      <workItem from="1525907202861" duration="5993000" />
+      <workItem from="1525907202861" duration="6688000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 09m 27s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 10m 09s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 14m 22s.xml">
       <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
     </history-entry>
@@ -815,9 +805,15 @@
     <history-entry file="VendingMachineTest_whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct - 2018.05.09 at 20h 21m 23s.xml">
       <configuration name="VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VendingMachineTest_whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct - 2018.05.09 at 20h 21m 44s.xml">
+      <configuration name="VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest - 2018.05.09 at 20h 22m 05s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5993000" />
+    <option name="totallyTimeSpent" value="6688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
@@ -832,7 +828,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32972136" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -845,7 +841,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3993808" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -863,14 +859,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
   </component>
@@ -935,8 +923,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+        <state relative-caret-position="784">
+          <caret line="171" column="5" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
