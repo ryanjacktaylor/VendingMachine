@@ -32,6 +32,9 @@ public class VendingMachineTest {
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
 
+        //The service guy added some coins to the coin acceptor...
+        vm.addCoinInventory(2,2,2);
+
         //Check the display
         assertEquals(vm.getDisplay(), INSERT_COIN_TEXT);
     }
@@ -59,6 +62,9 @@ public class VendingMachineTest {
     public void whenVendingMachineIsPassedAnInvalidWeightAndDiameterItAddsNothingToTheUserCredit(){
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
+
+        //The service guy added some coins to the coin acceptor...
+        vm.addCoinInventory(2,2,2);
 
         //Insert penny and check the user credit
         vm.insertCoin(19.05f , 2.5f);
@@ -111,6 +117,9 @@ public class VendingMachineTest {
 
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
+
+        //The service guy added some coins to the coin acceptor...
+        vm.addCoinInventory(2,2,2);
 
         //Add a cola to the machine
         vm.addProductInventory(COLA_PRODUCT_NAME, 1);
@@ -193,6 +202,9 @@ public class VendingMachineTest {
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
 
+        //The service guy added some coins to the coin acceptor...
+        vm.addCoinInventory(2,2,2);
+
         //Add $0.40.  This will require the machine to dispense one of each coin
         vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
         vm.insertCoin(DIME_DIA_MM, DIME_WEIGHT_G);
@@ -216,6 +228,9 @@ public class VendingMachineTest {
 
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
+
+        //The service guy added some coins to the coin acceptor...
+        vm.addCoinInventory(2,2,2);
 
         //Add Money and select Cola
         for (int i = 0; i<4; i++) {

@@ -21,6 +21,11 @@ public class CoinAcceptor {
     private static final float NICKEL_WEIGHT_MAX_G = 5f * (1f+COIN_TOLERANCE);
     private static final int   NICKEL_VALUE_CENTS = 5;
 
+    //Coin inventory
+    private int quarters;
+    private int dimes;
+    private int nickels;
+
     //Interface to coin acceptor
     public interface OnCoinReceivedListener{
         void onCoinReceived(int coinValue);
@@ -58,7 +63,7 @@ public class CoinAcceptor {
         this.coinAcceptorInterface = coinAcceptorInterface;
     }
 
-    public Change calculateChange(int valueInCents){
+    public Change calculateChange(int valueInCents, boolean dispense){
         Change change = new Change();
 
         //Start with the largest coin and work your way down
@@ -73,6 +78,53 @@ public class CoinAcceptor {
         int nickelsValue = dimesValue-(dimesValue/DIME_VALUE_CENTS)*DIME_VALUE_CENTS;
         change.setNickels(nickelsValue/NICKEL_VALUE_CENTS);
 
+        //Check if we have enough coins to make the change
+        //Since quarter is our largest denomination, we should never have to dispense one that we don't have
+        //We should only be dispensing a maximum of 2 dimes or 4 nickels, or some combination of the two.
+        if (change.getDimes() > dimes){
+            //Not enough dimes.  Can we do it all with nickels?
+            if (dimesValue/NICKEL_VALUE_CENTS > nickelsValue) {
+                change.setInsufficentCoins(true);
+            }
+        }
+        if (change.getNickels() > nickels){
+            change.setInsufficentCoins(true);
+        }
+
+        //Subtract from inventory if dispensing
+        if (dispense){
+            quarters-=change.getQuarters();
+            dimes-=change.getDimes();
+            nickels-=change.getNickels();
+        }
+
         return change;
+    }
+
+    public boolean isExactChangeOnly(int[] productValues){
+
+        for (int value:productValues){
+
+            //Quarter is the largest value we can accept, so let's see if we can make change with all quarters
+            Change change = calculateChange(value%QUARTER_VALUE_CENTS, false);
+
+            if (change.isInsufficentCoins()){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void setQuarters(int quarters) {
+        this.quarters = quarters;
+    }
+
+    public void setDimes(int dimes) {
+        this.dimes = dimes;
+    }
+
+    public void setNickels(int nickels) {
+        this.nickels = nickels;
     }
 }

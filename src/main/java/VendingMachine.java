@@ -8,6 +8,7 @@ public class VendingMachine {
     private static final String THANK_YOU_TEXT = "THANK YOU";
     private static final String PRICE_TEXT = "PRICE";
     private static final String SOLD_OUT_TEXT = "SOLD OUT";
+    private static final String EXACT_CHANGE_ONLY_TEXT = "EXACT CHANGE ONLY";
     private static final int DISPLAY_DELAY_SECONDS = 5;
 
     //Product Constants
@@ -35,9 +36,6 @@ public class VendingMachine {
 
     public VendingMachine(){
 
-        //Initialize Display
-        mDisplay = INSERT_COIN_TEXT;
-
         //Init user credit
         sUserCreditInCents = 0;
 
@@ -52,6 +50,9 @@ public class VendingMachine {
                 resetDisplay();
             }
         });
+
+        //Initialize Display
+        resetDisplay();
 
         //Initialize the inventory
         mInventory = new Inventory(mProducts);
@@ -87,7 +88,7 @@ public class VendingMachine {
                     response.setProductDispensed(true);
 
                     //Dispense Change
-                    response.setChange(mCoinAcceptor.calculateChange(sUserCreditInCents-product.getPriceInCents()));
+                    response.setChange(mCoinAcceptor.calculateChange(sUserCreditInCents-product.getPriceInCents(), true));
 
                     //Set the user credit to 0
                     sUserCreditInCents = 0;
@@ -118,7 +119,7 @@ public class VendingMachine {
     public Change selectCoinReturn(){
 
         //Calculate change
-        Change change =  mCoinAcceptor.calculateChange(sUserCreditInCents);
+        Change change =  mCoinAcceptor.calculateChange(sUserCreditInCents, true);
 
         //Reset user credit
         sUserCreditInCents = 0;
@@ -130,8 +131,18 @@ public class VendingMachine {
 
     }
 
+    //Note: This function would be used by the service guy to add product inventory
     public void addProductInventory(String productName, int count){
         mInventory.addProductCount(productName, count);
+    }
+
+
+    //Note: This function would be used by the service guy to add coins to the coin acceptor
+    public void addCoinInventory(int quarters, int dimes, int nickels){
+        mCoinAcceptor.setQuarters(quarters);
+        mCoinAcceptor.setDimes(dimes);
+        mCoinAcceptor.setNickels(nickels);
+        resetDisplay();
     }
 
     private void resetDisplayAfterDelay(int timeDelay){
@@ -157,8 +168,21 @@ public class VendingMachine {
         if (sUserCreditInCents > 0) {
             NumberFormat formatter = NumberFormat.getCurrencyInstance();
             mDisplay = formatter.format((float) sUserCreditInCents / 100f);
+        } else if (mCoinAcceptor.isExactChangeOnly(getProductValues(mProducts))){
+            mDisplay = EXACT_CHANGE_ONLY_TEXT;
         } else {
             mDisplay = INSERT_COIN_TEXT;
         }
+    }
+
+    private int[] getProductValues(Product[] products){
+
+        int[] values = new int[products.length];
+
+        for (int i=0;i<products.length;i++){
+            values[i]=products[i].getPriceInCents();
+        }
+
+        return values;
     }
 }

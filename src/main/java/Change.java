@@ -3,6 +3,7 @@ public class Change {
     private int quarters;
     private int dimes;
     private int nickels;
+    private boolean insufficentCoins;
 
     public int getQuarters() {
         return quarters;
@@ -26,6 +27,14 @@ public class Change {
 
     public void setNickels(int nickels) {
         this.nickels = nickels;
+    }
+
+    public boolean isInsufficentCoins() {
+        return insufficentCoins;
+    }
+
+    public void setInsufficentCoins(boolean insufficentCoins) {
+        this.insufficentCoins = insufficentCoins;
     }
 
 }
