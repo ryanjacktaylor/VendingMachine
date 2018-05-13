@@ -7,6 +7,7 @@ public class VendingMachine {
     private static final String INSERT_COIN_TEXT = "INSERT COIN";
     private static final String THANK_YOU_TEXT = "THANK YOU";
     private static final String PRICE_TEXT = "PRICE";
+    private static final String SOLD_OUT_TEXT = "SOLD OUT";
     private static final int DISPLAY_DELAY_SECONDS = 5;
 
     //Product Constants
@@ -25,9 +26,12 @@ public class VendingMachine {
     private static int sUserCreditInCents;
 
     //Products
-    private Product[] products = {new Product(COLA_PRODUCT_NAME, COLA_COST_IN_CENTS),
+    private Product[] mProducts = {new Product(COLA_PRODUCT_NAME, COLA_COST_IN_CENTS),
             new Product(CHIPS_PRODUCT_NAME, CHIPS_COST_IN_CENTS),
             new Product(CANDY_PRODUCT_NAME, CANDY_COST_IN_CENTS)};
+
+    //Inventory
+    private Inventory mInventory;
 
     public VendingMachine(){
 
@@ -48,6 +52,9 @@ public class VendingMachine {
                 resetDisplay();
             }
         });
+
+        //Initialize the inventory
+        mInventory = new Inventory(mProducts);
     }
 
     public String getDisplay(){
@@ -63,11 +70,17 @@ public class VendingMachine {
         ProductRequestResponse response = new ProductRequestResponse();
 
         //Find the product in our array
-        for (Product product:products){
+        for (Product product: mProducts){
             if (product.getName().equals(productName)){
 
-                //Product found.  Check price.
-                if (sUserCreditInCents >= product.getPriceInCents()){
+                //Product found.  Check if there is any inventory
+                if (mInventory.getProductCount(productName) <= 0){
+
+                    //No inventory.  Set the display to SOLD OUT for 5 seconds
+                    mDisplay = SOLD_OUT_TEXT;
+                    resetDisplayAfterDelay(DISPLAY_DELAY_SECONDS);
+
+                } else if (sUserCreditInCents >= product.getPriceInCents()){
 
                     //There's enough money.  Dispense product.
                     response.setProductName(product.getName());
@@ -78,6 +91,9 @@ public class VendingMachine {
 
                     //Set the user credit to 0
                     sUserCreditInCents = 0;
+
+                    //Decrement the inventory
+                    mInventory.decrementProductCount(productName);
 
                     //Set the display to THANK YOU
                     mDisplay = THANK_YOU_TEXT;
@@ -112,6 +128,10 @@ public class VendingMachine {
 
         return change;
 
+    }
+
+    public void addProductInventory(String productName, int count){
+        mInventory.addProductCount(productName, count);
     }
 
     private void resetDisplayAfterDelay(int timeDelay){

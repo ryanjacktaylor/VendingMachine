@@ -74,6 +74,11 @@ public class VendingMachineTest {
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
 
+        //Add products to the machine
+        vm.addProductInventory(COLA_PRODUCT_NAME, 1);
+        vm.addProductInventory(CHIPS_PRODUCT_NAME, 1);
+        vm.addProductInventory(CANDY_PRODUCT_NAME, 1);
+
         //Add Money and select Cola
         for (int i = 0; i<4; i++) {
             vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
@@ -106,6 +111,9 @@ public class VendingMachineTest {
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
 
+        //Add a cola to the machine
+        vm.addProductInventory(COLA_PRODUCT_NAME, 1);
+
         //Add Money and select Cola
         for (int i = 0; i<4; i++) {
             vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
@@ -131,6 +139,9 @@ public class VendingMachineTest {
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
 
+        //Add a cola to the machine
+        vm.addProductInventory(COLA_PRODUCT_NAME, 1);
+
         //Add Money and select Cola
         vm.insertCoin(QUARTER_DIA_MM, QUARTER_WEIGHT_G);
         ProductRequestResponse colaResponse = vm.requestProduct(COLA_PRODUCT_NAME);
@@ -153,6 +164,9 @@ public class VendingMachineTest {
 
         //Create the vending machine
         VendingMachine vm = new VendingMachine();
+
+        //Add a cola to the machine
+        vm.addProductInventory(COLA_PRODUCT_NAME, 1);
 
         //Add $1.40.  This will require the machine to dispense one of each coin
         for (int i = 0; i<5; i++) {
