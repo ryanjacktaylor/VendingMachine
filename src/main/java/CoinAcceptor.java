@@ -57,4 +57,22 @@ public class CoinAcceptor {
     public void setOnCoinReceivedListener(OnCoinReceivedListener coinAcceptorInterface){
         this.coinAcceptorInterface = coinAcceptorInterface;
     }
+
+    public Change calculateChange(int valueInCents){
+        Change change = new Change();
+
+        //Start with the largest coin and work your way down
+        //quarters
+        change.setQuarters(valueInCents/QUARTER_VALUE_CENTS);
+
+        //Dimes
+        int dimesValue = valueInCents-(valueInCents/QUARTER_VALUE_CENTS)*QUARTER_VALUE_CENTS;
+        change.setDimes(dimesValue/DIME_VALUE_CENTS);
+
+        //Nickels
+        int nickelsValue = dimesValue-(dimesValue/DIME_VALUE_CENTS)*DIME_VALUE_CENTS;
+        change.setNickels(nickelsValue/NICKEL_VALUE_CENTS);
+
+        return change;
+    }
 }

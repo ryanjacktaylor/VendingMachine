@@ -73,6 +73,9 @@ public class VendingMachine {
                     response.setProductName(product.getName());
                     response.setProductDispensed(true);
 
+                    //Dispense Change
+                    response.setChange(mCoinAcceptor.calculateChange(sUserCreditInCents-product.getPriceInCents()));
+
                     //Set the user credit to 0
                     sUserCreditInCents = 0;
 

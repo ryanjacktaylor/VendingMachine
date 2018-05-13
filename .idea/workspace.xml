@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="" />
+    <list default="true" id="646e0915-ca51-4041-b377-b72868547795" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Change.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProductRequestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductRequestResponse.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="171" column="5" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
+            <state relative-caret-position="631">
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,11 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Change.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Change.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="480">
+              <caret line="76" column="116" lean-forward="true" selection-start-line="76" selection-start-column="116" selection-end-line="76" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1027#1028#0" expanded="true" />
@@ -60,8 +72,14 @@
       <file leaf-file-name="ProductRequestResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ProductRequestResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="323">
+              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+              <folding>
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +87,8 @@
       <file leaf-file-name="CoinAcceptor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CoinAcceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="818">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="427">
+              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -519,10 +537,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/CoinAcceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProductRequestResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/test/java/VendingMachineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Change.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProductRequestResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CoinAcceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/VendingMachine.java" />
       </list>
     </option>
   </component>
@@ -622,7 +641,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -677,13 +696,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
+      <option name="METHOD_NAME" value="whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -752,17 +771,17 @@
     <list>
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
       <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
-      <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
       <item itemvalue="JUnit.VendingMachineTest" />
       <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
+      <item itemvalue="JUnit.VendingMachineTest.whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VendingMachineTest.whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange" />
         <item itemvalue="JUnit.VendingMachineTest" />
         <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedAndChangeIsCorrectTheVendingMachineWillReturnTheProduct" />
         <item itemvalue="JUnit.VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" />
         <item itemvalue="JUnit.VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" />
-        <item itemvalue="JUnit.VendingMachineTest.whenAProductIsSelectedWithInsufficientFundsTheDisplayShowsPriceThenFunds" />
       </list>
     </recent_temporary>
   </component>
@@ -776,14 +795,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525907198997</updated>
-      <workItem from="1525907202861" duration="6688000" />
+      <workItem from="1525907202861" duration="7161000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin - 2018.05.09 at 20h 14m 22s.xml">
-      <configuration name="VendingMachineTest.whenAProductIsDispensedVerifyTheDisplayShowsThankYouFollowedByInsertCoin" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendingMachineTest_whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit - 2018.05.09 at 20h 14m 28s.xml">
       <configuration name="VendingMachineTest.whenVendingMachineIsPassedAValidWeightAndDiameterItAddsTheCoinValueToTheUserCredit" configurationId="JUnit" />
     </history-entry>
@@ -811,9 +827,12 @@
     <history-entry file="VendingMachineTest - 2018.05.09 at 20h 22m 05s.xml">
       <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VendingMachineTest_whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange - 2018.05.13 at 15h 27m 23s.xml">
+      <configuration name="VendingMachineTest.whenProductIsSelectedWithTooMuchMoneyTheMachineDispensesChange" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6688000" />
+    <option name="totallyTimeSpent" value="7161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
@@ -828,12 +847,12 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24970897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13969733" />
       <window_info anchor="bottom" id="Build" weight="0.32972136" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Gradle" />
@@ -850,6 +869,38 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Build" order="0" weight="0.32972136" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24970897" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.3993808" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -876,24 +927,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Product.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProductRequestResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/requests/FilterRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CoinAcceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -907,26 +944,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Change.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="204">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProductRequestResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="171" column="5" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
+        <state relative-caret-position="631">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CoinAcceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="76" column="116" lean-forward="true" selection-start-line="76" selection-start-column="116" selection-end-line="76" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1117#1118#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
           </folding>
         </state>
       </provider>

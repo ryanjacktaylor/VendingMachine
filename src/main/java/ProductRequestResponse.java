@@ -2,7 +2,7 @@ public class ProductRequestResponse {
 
     private String productName;
     private boolean productDispensed;
-    private boolean changeDispensed;
+    private Change change;
 
     public String getProductName() {
         return productName;
@@ -18,6 +18,14 @@ public class ProductRequestResponse {
 
     public void setProductDispensed(boolean productDispensed) {
         this.productDispensed = productDispensed;
+    }
+
+    public Change getChange() {
+        return change;
+    }
+
+    public void setChange(Change change) {
+        this.change = change;
     }
 
 }
