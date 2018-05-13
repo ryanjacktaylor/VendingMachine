@@ -11,6 +11,7 @@ public class VendingMachineTest {
     private static final String THANK_YOU_TEXT = "THANK YOU";
     private static final String PRICE_TEXT = "PRICE";
     private static final String SOLD_OUT_TEXT = "SOLD OUT";
+    private static final String EXACT_CHANGE_ONLY_TEXT = "EXACT CHANGE ONLY";
 
     //Coin Diameter/Weight constants
     private static final float QUARTER_DIA_MM = 24.26f;
@@ -251,5 +252,15 @@ public class VendingMachineTest {
             assertEquals(true, false);
         }
         assertEquals(INSERT_COIN_TEXT, vm.getDisplay());
+    }
+
+    @Test
+    public void whenVendingCannotMakeChangeForAnyProductDisplayExactChangeOnly(){
+
+        //Create the vending machine
+        VendingMachine vm = new VendingMachine();
+
+        //At this point, there are no coins in the machine, so it should display EXACT CHANGE ONLY
+        assertEquals(EXACT_CHANGE_ONLY_TEXT, vm.getDisplay());
     }
 }
