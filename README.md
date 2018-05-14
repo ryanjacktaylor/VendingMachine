@@ -17,7 +17,3 @@ From the command line:
 ```
 gradlew test
 ```
-
-## Discussion Notes
-
-This project was a bit odd for me, as 
